@@ -1,0 +1,12 @@
+{% extends 'menu_items/base.html' %}
+{% block title %} Main Page {% endblock %}
+{% block header %}<h1 class="header">Main Page</h1>{% endblock %}
+
+{% load draw_menu %}
+{% block menus %}
+    {% for menu in menus %}
+        <div class="menus">
+            {% draw_menu menu.title %}
+        </div>
+    {% endfor %}
+{% endblock %}

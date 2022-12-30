@@ -1,0 +1,13 @@
+<div class="menu">
+    {% for item in tree_menu %}
+        {% if item.open or item.first_level or item.active or not item.active %}
+        <a href="{% url 'menu_item' menu_url=item.menu_url %}"
+           class="item
+                {% if item.first_level %}first-level{% endif %}
+                {% if item.open %}open{% endif %}
+                {% if item.active %}active{% endif %}
+                {% if item.active_child %} active_child {% endif %}
+            ">{{ item.title }}</a>
+        {% endif %}
+    {% endfor %}
+</div>

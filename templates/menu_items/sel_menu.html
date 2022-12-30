@@ -1,0 +1,10 @@
+{% extends 'menu_items/base.html' %}
+{% block title %} {{ menu.title }} {% endblock %}
+{% block header %}<a href="/"><h1 class="header">{{ menu.title }}</h1></a>{% endblock %}
+
+{% load draw_menu %}
+{% block menus %}
+    <div class="menus">
+        {% draw_menu menu.menu_title %}
+    </div>
+{% endblock %}

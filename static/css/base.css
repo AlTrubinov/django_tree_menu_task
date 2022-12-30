@@ -1,0 +1,93 @@
+html, body {
+    font-size: 20px;
+    font-family: "Gill Sans", sans-serif;
+    color: #073641;
+    background: #fff;
+}
+
+.main-content {
+    padding: 1rem 4rem;
+    box-sizing: border-box;
+    display: contents;
+}
+
+.header {
+    font-weight: 800;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.link {
+    font-size: 26px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #073641;
+}
+
+.post a {
+    text-decoration: none;
+}
+
+.menu {
+    border: 1px solid rgba(238, 226, 213, 0.63);
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgb(184, 184, 184);
+    overflow: hidden;
+}
+
+.item {
+    padding: .5rem 2rem;
+    display: block;
+    background-color: rgba(103, 103, 103, 0.06);
+    border-bottom: 1px solid #d0d0d073;
+    color: #202026;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.item.active {
+    font-weight: 700;
+}
+
+.item.open {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.item.first-level {
+    display: block;
+    padding-left: 1rem;
+}
+
+.item.first-level.active ~ .item.open {
+    padding-left: 2rem;
+}
+
+.item.first-level.active_child + .item.active {
+    padding-left: 2rem;
+}
+
+.item.open ~ .item.active ~ .item.open {
+    padding-left: 4rem;
+}
+
+.item.first-level.active_child ~ .item.open ~ .item.active {
+    padding-left: 4rem;
+}
+
+.item.active_child:after {
+    content: '⌄';
+    font-size: 1rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 10%;
+}
+
+.item:hover {
+    background-color: #3c63c3;
+    color: white;
+}
